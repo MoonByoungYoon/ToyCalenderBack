@@ -7,15 +7,20 @@ import lombok.Setter;
 @Setter
 @Getter
 public class TestDto {
-	
-	public TestDto() {}
+
+	public TestDto() {
+	}
 
 	int id;
+	int type;
 	String name;
+	String user;
 
 	@Builder
-	public TestDto(int id, String name) {
+	public TestDto(int id, int type, String name, String user) {
 		this.id = id;
+		this.type = type;
 		this.name = name;
+		this.user = user;
 	}
 }

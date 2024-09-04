@@ -3,7 +3,10 @@
 <mapper namespace="com.toy.api.test.mapper.TestMapper">
 	
 	<select id="selectApi">
-		select * from test;
+		SELECT
+			*
+		FROM 
+			CALENDAR;
 	</select>
 	
 </mapper>

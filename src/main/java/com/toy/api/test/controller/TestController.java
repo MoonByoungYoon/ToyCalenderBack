@@ -1,7 +1,7 @@
 package com.toy.api.test.controller;
 
-import org.springframework.stereotype.Controller; 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.toy.api.test.dto.TestDto;
 import com.toy.api.test.service.TestService;
@@ -9,7 +9,7 @@ import com.toy.api.test.service.TestService;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-@Controller
+@RestController
 public class TestController {
 	
 	private final TestService testService; 
@@ -24,8 +24,6 @@ public class TestController {
 		TestDto returnDto = new TestDto();
 		
 		returnDto = testService.getTestApi();
-		System.out.println("returnDto.id : " + returnDto.getId());
-		System.out.println("returnDto.name : " + returnDto.getName());
 		
 		return returnDto;
 	}
